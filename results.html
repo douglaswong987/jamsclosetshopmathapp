@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h1>Results</h1>
+    {% if totals %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Total</th>
+            </tr>
+            {% for name, total in totals.items() %}
+                <tr>
+                    <td>{{ name }}</td>
+                    <td>{{ total }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No results available.</p>
+    {% endif %}
+</body>
+</html>
